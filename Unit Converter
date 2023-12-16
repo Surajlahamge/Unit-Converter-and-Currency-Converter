@@ -1,0 +1,64 @@
+def meters_to_kilometers(meters):
+    return meters / 1000
+
+def kilometers_to_meters(kilometers):
+    return kilometers * 1000
+
+def feet_to_meters(feet):
+    return feet * 0.3048
+
+def meters_to_feet(meters):
+    return meters / 0.3048
+
+def miles_to_kilometers(miles):
+    return miles * 1.60934
+
+def kilometers_to_miles(kilometers):
+    return kilometers / 1.60934
+
+def main():
+    print("Unit Converter")
+    print("1. Meters to Kilometers")
+    print("2. Kilometers to Meters")
+    print("3. Feet to Meters")
+    print("4. Meters to Feet")
+    print("5. Miles to Kilometers")
+    print("6. Kilometers to Miles")
+
+    choice = int(input("Enter your choice (1-6): "))
+
+    if choice == 1:
+        meters = float(input("Enter length in meters: "))
+        result = meters_to_kilometers(meters)
+        print(f"{meters} meters is equal to {result} kilometers")
+
+    elif choice == 2:
+        kilometers = float(input("Enter length in kilometers: "))
+        result = kilometers_to_meters(kilometers)
+        print(f"{kilometers} kilometers is equal to {result} meters")
+
+    elif choice == 3:
+        feet = float(input("Enter length in feet: "))
+        result = feet_to_meters(feet)
+        print(f"{feet} feet is equal to {result} meters")
+
+    elif choice == 4:
+        meters = float(input("Enter length in meters: "))
+        result = meters_to_feet(meters)
+        print(f"{meters} meters is equal to {result} feet")
+
+    elif choice == 5:
+        miles = float(input("Enter length in miles: "))
+        result = miles_to_kilometers(miles)
+        print(f"{miles} miles is equal to {result} kilometers")
+
+    elif choice == 6:
+        kilometers = float(input("Enter length in kilometers: "))
+        result = kilometers_to_miles(kilometers)
+        print(f"{kilometers} kilometers is equal to {result} miles")
+
+    else:
+        print("Invalid choice. Please enter a number between 1 and 6.")
+
+if __name__ == "__main__":
+    main()
